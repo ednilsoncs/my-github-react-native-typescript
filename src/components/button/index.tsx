@@ -5,8 +5,8 @@ import { Container, Touchable, Text } from './styles';
 
 interface ButtonProps extends TouchableOpacityProps {
   isDisabled?: boolean;
-  color: string;
-  children: string;
+  color?: string;
+  children?: string;
 }
 
 const Button: React.ElementType<ButtonProps> = ({
@@ -16,7 +16,7 @@ const Button: React.ElementType<ButtonProps> = ({
   ...props
 }: ButtonProps) => {
   return (
-    <Container>
+    <Container testID="button">
       <Touchable isDisabled={isDisabled} color={color} {...props}>
         <Text isDisabled={isDisabled}>{children}</Text>
       </Touchable>

@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { TouchableOpacityProps, TextProps } from 'react-native';
 
 interface TouchableType extends TouchableOpacityProps {
-  color: string;
+  color?: string;
   isDisabled: boolean;
 }
 
